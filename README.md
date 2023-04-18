@@ -4,6 +4,8 @@
 
 Clone this repo, run `npm i` to install dependencies, and then run `npm run dev` to launch the app. On page refresh, the app requests a new affirmation from a DynamoDB populated with affirmations via a Lambda endpoint.
 
+![demo image](demo.png)
+
 ## 🚀 Project Structure
 
 Inside of your Astro project, you'll see the following folders and files:
