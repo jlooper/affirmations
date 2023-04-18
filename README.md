@@ -1,17 +1,8 @@
-# Astro Starter Kit: Basics
+# MyAffirmations App
 
-```
-npm create astro@latest -- --template basics
-```
+## QuickStart
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![basics](https://user-images.githubusercontent.com/4677417/186188965-73453154-fdec-4d6b-9c34-cb35c248ae5b.png)
-
+Clone this repo, run `npm i` to install dependencies, and then run `npm run dev` to launch the app. On page refresh, the app requests a new affirmation from a DynamoDB populated with affirmations via a Lambda endpoint.
 
 ## 🚀 Project Structure
 
