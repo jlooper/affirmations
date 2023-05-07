@@ -1,9 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-const num = Math.floor(Math.random() * 47) + 1;
-const response = await fetch('https://e51pzppdu1.execute-api.us-east-1.amazonaws.com/items/'+num);
-const data = await response.json();
+let num = Math.floor(Math.random() * 47) + 1;
+let response = await fetch('https://e51pzppdu1.execute-api.us-east-1.amazonaws.com/items/'+num);
+let data = await response.json();
 ---
 
 <Layout title="Welcome to Astro.">
@@ -20,7 +20,7 @@ const data = await response.json();
 	main {
 		margin: auto;
 		padding: 1.5rem;
-		max-width: 60ch;
+		max-width: 80ch;
 	}
 	h1 {
 		font-size: 3rem;
@@ -41,6 +41,8 @@ const data = await response.json();
 		background-color: white;
 		padding: 1rem;
 		border-radius: 0.4rem;
+		text-align: center;
+		font-size: 1.5rem;
 	}
 	.instructions code {
 		font-size: 0.875em;
