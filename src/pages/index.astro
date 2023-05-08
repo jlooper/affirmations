@@ -1,18 +1,19 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-let num = Math.floor(Math.random() * 47) + 1;
-let response = await fetch('https://e51pzppdu1.execute-api.us-east-1.amazonaws.com/items/'+num);
-let data = await response.json();
+const response = await fetch('https://e51pzppdu1.execute-api.us-east-1.amazonaws.com/items');
+const data = await response.json();
+
+import AffirmationComponent from '../components/AffirmationComponent.jsx';
+
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="My Affirmations">
 	<main>
 		<h1>Welcome to <span class="text-gradient">Your Affirmation App</span></h1>
-		<p class="instructions">
-			{data}
-		</p>
-		
+			<div class="instructions">
+				<AffirmationComponent client:load messages={data} />
+			</div>
 	</main>
 </Layout>
 
@@ -44,21 +45,5 @@ let data = await response.json();
 		text-align: center;
 		font-size: 1.5rem;
 	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
+	
 </style>
