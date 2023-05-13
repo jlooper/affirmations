@@ -10,8 +10,9 @@ import AffirmationComponent from '../components/AffirmationComponent.jsx';
 
 <Layout title="My Affirmations">
 	<main>
+
 		<h1>Welcome to <span class="text-gradient">Your Affirmation App</span></h1>
-			<div class="instructions">
+			<div class="text">
 				<AffirmationComponent client:load affirmations={data} />
 			</div>
 	</main>
@@ -35,7 +36,7 @@ import AffirmationComponent from '../components/AffirmationComponent.jsx';
 		background-size: 400%;
 		background-position: 0%;
 	}
-	.instructions {
+	.text {
 		line-height: 1.6;
 		margin: 1rem 0;
 		border: 1px solid rgba(var(--accent), 25%);
@@ -45,5 +46,5 @@ import AffirmationComponent from '../components/AffirmationComponent.jsx';
 		text-align: center;
 		font-size: 1.5rem;
 	}
-	
+
 </style>

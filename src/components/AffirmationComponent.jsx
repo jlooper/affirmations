@@ -2,7 +2,7 @@ import { useState } from 'preact/hooks';
 
 export default function Affirmation({affirmations}) {
 
-  let num = Math.floor(Math.random() * 47) + 1;
+  const num = Math.floor(Math.random() * affirmations.length);
   const [affirmation] = useState(JSON.stringify(affirmations[num].Text));
 
   return (
