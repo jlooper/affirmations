@@ -6,8 +6,6 @@ export default function Affirmation({affirmations}) {
   const [affirmation] = useState(JSON.stringify(affirmations[num].Text));
 
   return (
-    <div> 
       <h3>{affirmation}</h3>
-    </div>
   );
 }
